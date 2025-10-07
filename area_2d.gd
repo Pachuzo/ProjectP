@@ -33,6 +33,7 @@ func _on_body_entered(body):
 		# Imprimimos un mensaje en la consola para depuración.
 		print("Jugador colisionó con obstáculo")
 
+		ScoreManager.stop_scoring()  # Detiene el sumado de puntos
 		# Llamamos a la función show_game_over_menu() en el nodo principal llamado "Main".
 		# Esto muestra el menú de Game Over cuando el jugador pierde.
 		get_node("/root/Main").show_game_over_menu()

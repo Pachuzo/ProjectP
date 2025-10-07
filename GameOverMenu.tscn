@@ -1,10 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqlnrw8liqyii"]
+[gd_scene load_steps=6 format=3 uid="uid://bqlnrw8liqyii"]
 
 [ext_resource type="Script" uid="uid://dmr55icd3m22o" path="res://canvas_layer.gd" id="1_gla7p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gla7p"]
 font_size = 30
 font_color = Color(0.501961, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5e8aq"]
+font_color = Color(1, 1, 0.807843, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vuawn"]
+font_color = Color(1, 1, 0.164706, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d1n33"]
+line_spacing = 5.0
+paragraph_spacing = 1.0
 
 [node name="GameOverMenu" type="CanvasLayer"]
 process_mode = 2
@@ -68,3 +78,19 @@ text = "Reintentar"
 [node name="Button_GoMenu" type="Button" parent="ColorRect/CenterContainer/PanelContainer/Panel/VBoxContainer"]
 layout_mode = 2
 text = "Ir al menú"
+
+[node name="final_score_label" type="Label" parent="ColorRect/CenterContainer/PanelContainer/Panel/VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_5e8aq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="high_score_label" type="Label" parent="ColorRect/CenterContainer/PanelContainer/Panel/VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_vuawn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="new_record_label" type="Label" parent="ColorRect/CenterContainer/PanelContainer/Panel/VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_d1n33")
