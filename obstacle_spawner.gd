@@ -16,6 +16,8 @@ func _process(delta):
 	# Reducimos el temporizador cada frame
 	timer -= delta
 
+
+
 	# Si se acabó el tiempo, generamos un nuevo obstáculo
 	if timer <= 0:
 		spawn_obstacle()
